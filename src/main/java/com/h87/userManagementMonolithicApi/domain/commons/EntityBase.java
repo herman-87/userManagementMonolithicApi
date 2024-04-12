@@ -7,12 +7,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.Version;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @MappedSuperclass
@@ -29,7 +27,6 @@ public abstract class EntityBase {
     @Column(name = "c_tenant_id")
     private String tenantId;
 
-    @Builder.Default
     @Column(name = "c_creation_date")
     private LocalDateTime creationDate = LocalDateTime.now();
 }
